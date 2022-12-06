@@ -1,7 +1,8 @@
 file = open("04/input.txt")
 
 lines = file.readlines()
-count = 0
+count1 = 0
+count2 = 0
 
 for line in lines:
     abcd = line.split(",")
@@ -12,14 +13,11 @@ for line in lines:
     s2 = int(cd[0])
     e2 = int(cd[1])
     
-    print("{} {} {} {}".format(s1, e1, s2, e2))
-    
-    # if ((int(s1) <= int(s2) and e1 >= e2) or (s2 <= s1 and e2 >= e1)):
-    #     count += 1
-    #     print("counted")
+    if ((s1 <= s2 and e1 >= e2) or (s2 <= s1 and e2 >= e1)):
+        count1 += 1
     
     if (not (e1 < s2 or e2 < s1)):
-        count += 1
-        print("counted")
-        
-print(count)
+        count2 += 1
+
+print("Part One: {}".format(count1))
+print("Part Two: {}".format(count2))
