@@ -9,14 +9,17 @@ file = open("03/input.txt")
 lines = file.readlines()
 sum = 0
 
-# for line in lines:
-#     line = line.replace("\n", "")
-#     string1, string2 = line[:len(line)//2], line[len(line)//2:]
+for line in lines:
+    line = line.replace("\n", "")
+    string1, string2 = line[:len(line)//2], line[len(line)//2:]
     
-#     common = "".join(set(string1).intersection(string2))
+    common = "".join(set(string1).intersection(string2))
     
-#     sum += get_value(common)
+    sum += get_value(common)
+    
+print("Part One: {}".format(sum))
 
+sum = 0
 i = 0
 while i < len(lines):
     string1 = lines[i].replace("\n", "")
@@ -31,6 +34,5 @@ while i < len(lines):
     
     i += 3
    
-    
-print(sum)
+print("Part Two: {}".format(sum))
 
