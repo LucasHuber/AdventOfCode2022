@@ -11,5 +11,7 @@ for line in lines:
         sums.append(sum)
         sum = 0
       
-sums.sort(reverse=True)      
-print(int(sums[0]) + int(sums[1]) + int(sums[2]))
+sums.sort(reverse=True)
+
+print("Part One: {}".format(int(sums[0])))
+print("Part Two: {}".format(int(sums[0]) + int(sums[1]) + int(sums[2])))
